@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Alert, Switch } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { colors, spacing, radius, fontSize } from '../src/theme';
+import { colors, spacing, radius, fontSize } from '../../src/theme';
 
 export default function SettingsScreen() {
   const router = useRouter();

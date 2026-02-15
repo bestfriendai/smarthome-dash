@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet, RefreshControl } from 'react-native';
 import { useRouter } from 'expo-router';
-import { colors, spacing, radius, fontSize } from '../src/theme';
-import { mockSensors, mockRooms, getStatusColor, getSensorIcon, Sensor } from '../src/data/sensors';
+import { colors, spacing, radius, fontSize } from '../../src/theme';
+import { mockSensors, mockRooms, getStatusColor, getSensorIcon, Sensor } from '../../src/data/sensors';
 
 export default function DashboardScreen() {
   const router = useRouter();

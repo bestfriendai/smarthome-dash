@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import { colors, spacing, radius, fontSize } from '../src/theme';
-import { mockRooms, mockSensors, getSensorIcon, Room, Sensor } from '../src/data/sensors';
+import { colors, spacing, radius, fontSize } from '../../src/theme';
+import { mockRooms, mockSensors, getSensorIcon, Room, Sensor } from '../../src/data/sensors';
 
 export default function RoomsScreen() {
   const [rooms] = useState<Room[]>(mockRooms);

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
-import { colors, spacing, radius, fontSize } from '../src/theme';
-import { mockSensors, getStatusColor, getSensorIcon, Sensor } from '../src/data/sensors';
+import { colors, spacing, radius, fontSize } from '../../src/theme';
+import { mockSensors, getStatusColor, getSensorIcon, Sensor } from '../../src/data/sensors';
 
 type FilterType = 'all' | 'temperature' | 'humidity' | 'co2' | 'motion';
 
