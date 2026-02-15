@@ -44,6 +44,45 @@ eas build --platform ios
 eas build --platform android
 ```
 
+## API Configuration
+
+### Environment Variables
+
+Create a `.env` file in the project root:
+
+```bash
+# Home Assistant Configuration
+HA_URL=http://homeassistant.local:8123
+HA_ACCESS_TOKEN=your_long_lived_access_token
+
+# Optional: For cloud connectivity
+HA_CLOUD_API_KEY=your_cloud_api_key
+```
+
+### Home Assistant Setup
+
+1. Open Home Assistant
+2. Go to Profile → Security → Long-Lived Access Tokens
+3. Create a new token
+4. Add your HA URL and token to `.env`:
+
+```typescript
+// src/services/homeAssistant.ts
+export const HA_CONFIG = {
+  url: process.env.HA_URL || 'http://homeassistant.local:8123',
+  token: process.env.HA_ACCESS_TOKEN
+};
+```
+
+### RevenueCat Configuration
+
+1. Create an account at [RevenueCat.com](https://revenuecat.com)
+2. Create products in App Store Connect / Google Play Console:
+   - Monthly: $2.99/month - `smarthome_monthly`
+   - Annual: $14.99/year - `smarthome_annual`
+3. Configure products in RevenueCat dashboard
+4. Add your API key to `src/services/purchases.ts`
+
 ## License
 
 Proprietary — All rights reserved
